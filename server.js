@@ -12,6 +12,10 @@ app.use(bodyParser.json({ extended: false }))
 
 app.use('/pacientes', pacientes)
 
+app.get('/', (req,res) => {
+    res.send("Olá seja bem vindo a minha API. Acesse /pacientes para ver a lista de pacientes cadastrados")
+})
+
 app.listen(3000, err => {
     if(err) console.log(err)
     else    console.log('Servidor rodando na porta 3000')
