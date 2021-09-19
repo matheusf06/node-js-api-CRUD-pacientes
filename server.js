@@ -19,5 +19,5 @@ app.get('/', (req,res) => {
 
 app.listen(port, err => {
     if(err) console.log(err)
-    else    console.log('Servidor rodando na porta 3000')
+    else    console.log('Servidor rodando na porta', port)
 })
