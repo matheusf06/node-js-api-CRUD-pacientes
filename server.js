@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
@@ -16,7 +17,7 @@ app.get('/', (req,res) => {
     res.send("Olá seja bem vindo a minha API. Acesse /pacientes para ver a lista de pacientes cadastrados")
 })
 
-app.listen(3000, err => {
+app.listen(port, err => {
     if(err) console.log(err)
     else    console.log('Servidor rodando na porta 3000')
 })
