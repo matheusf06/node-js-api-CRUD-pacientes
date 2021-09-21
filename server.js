@@ -21,7 +21,7 @@ app.use('/pacientes', pacientes)
 
 app.get('/', (req,res) => {
     res.header('Cache-Control', 'public, max-age=3600')
-    res.send("<p>Olá seja bem vindo a minha API.</p> <p>Acesse <a>https://nodejs-api-clinica.herokuapp.com/pacientes</a> para ver a lista de pacientes cadastrados</p>")
+    res.send("<p>Olá seja bem vindo a minha API.</p> <p>Acesse <a href='https://nodejs-api-clinica.herokuapp.com/pacientes'>Pacientes</a> para ver a lista de pacientes cadastrados</p>")
 })
 
 app.listen(port, err => {
